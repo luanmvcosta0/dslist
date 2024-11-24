@@ -1,12 +1,18 @@
 package com.devsuperior.dslist.entites;
 
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_game")
 public class Game {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    @Column(name = "game_year")  //Mudando o nome da coluna pois 'year' é uma palavra reservada no SQL.
     private Integer year;
     private String gente;
     private String plataforms;
