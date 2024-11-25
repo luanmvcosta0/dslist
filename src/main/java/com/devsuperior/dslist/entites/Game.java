@@ -14,8 +14,8 @@ public class Game {
     private String title;
     @Column(name = "game_year")  //Mudando o nome da coluna pois 'year' é uma palavra reservada no SQL.
     private Integer year;
-    private String gente;
-    private String plataforms;
+    private String genre;
+    private String plataform;
     private Double score;
     private String imgUrl;
     private String shortDescription;
@@ -26,12 +26,12 @@ public class Game {
     public Game () {
     }
 
-    public Game(Long id, String title, Integer year, String gente, String plataforms, Double score, String imgUrl, String shortDescription, String longDescription) {
+    public Game(Long id, String title, Integer year, String genre, String plataform, Double score, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
-        this.gente = gente;
-        this.plataforms = plataforms;
+        this.genre = genre;
+        this.plataform = plataform;
         this.score = score;
         this.imgUrl = imgUrl;
         this.shortDescription = shortDescription;
@@ -64,20 +64,20 @@ public class Game {
         this.year = year;
     }
 
-    public String getGente() {
-        return gente;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGente(String gente) {
-        this.gente = gente;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
-    public String getPlataforms() {
-        return plataforms;
+    public String getPlataform() {
+        return plataform;
     }
 
-    public void setPlataforms(String plataforms) {
-        this.plataforms = plataforms;
+    public void setPlataform(String plataform) {
+        this.plataform = plataform;
     }
 
     public Double getScore() {
